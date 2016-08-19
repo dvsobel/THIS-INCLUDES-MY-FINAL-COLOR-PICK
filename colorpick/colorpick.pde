@@ -32,13 +32,17 @@ void draw(){
   rectMode(CENTER);
   ////shapes for each square
       
-  rect(25,25,50,50);
+  rect(25,25,50,50);//big square
+  ellipse(25,25,40,40);//tiny shape inside square
   
-  rect(25, 75, 50, 50);
+  rect(25, 75, 50, 50);//big square
+  line(25, 65, 25, 95);//small line
   
-  rect(25,125,50,50);
+  rect(25,125,50,50);//big square
+  triangle(10, 120, 10, 140,35 ,140);//small triangle
   
-  rect(25,175, 50, 50);
+  rect(25,175, 50, 50);//big rect
+  rect(25,175, 30, 30);//small rect
   
   for (int i = 0; i < picker.length; i++){
     fill(picker[i]);
@@ -54,22 +58,22 @@ void draw(){
     //for the shape array side bar
     if (shapeTracker==1){
       stroke(0);
-      ellipse (mouseX, mouseY, 100, 100);
+      ellipse (mouseX, mouseY, 50, 50);
     }
   
     if(shapeTracker==2){
       stroke(0);
-      line(mouseX, mouseY, 22,10);
+      line(mouseX, mouseY, 10,10);
     }
   
     if(shapeTracker==3){
       stroke(0);
-      triangle(mouseX, mouseY, 200,200, 450 , 234);
+      triangle(mouseX, mouseY, 50,50, 30,30);
     }
   
     if(shapeTracker==4){
       stroke(0);
-      rect(mouseX, mouseY, 300,300);
+      rect(mouseX, mouseY, 50,50);
     }
   }
   
